@@ -1,5 +1,5 @@
-import java.time.LocalDate; //This is For Imports the LocalDate class for date-related operations
-import java.util.Scanner; //This is for Imports the Scanner class for user input
+import java.time.LocalDate;
+import java.util.Scanner; //This is For Imports the LocalDate class for date-related operations
 
 public class App { // Defines a public class named App
     public static void main(String[] args) throws Exception { // The main method where the program execution begins
@@ -17,18 +17,14 @@ public class App { // Defines a public class named App
 
         switch (gender) { // Starts a switch statement based on the gender input
             case "l": // if the input is "l", sets gender to "Laki - Laki" (Male)
-
                 gender = "Laki - Laki"; // rewrite the gender variable value to "Laki - Laki" (Male)
-
                 break; // This will stop the execution of more code and case testing inside the block
             case "p": // If the input is "p", sets gender to "Perempuan" (Female)
-
                 gender = "Perempuan"; // rewrite the gender variable value to "Perempuan" (Female)
-
-                break;// This will stop the execution of more code and case testing inside the block
+                break; // This will stop the execution of more code and case testing inside the block
             default:
                 throw new AssertionError("Sorry Your Gender Is Not Valid"); // Throws an error message if the input is
-                                                                            // neither "l" nor "p".
+            // neither "l" nor "p".
         }
 
         System.out.println("Masukkan tahun lahir :");// Prompts the user to enter Birth Year
