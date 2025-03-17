@@ -22,57 +22,52 @@ public class App {
         System.out.print("Pilih (1/2): ");
         choice = input.nextInt();
 
-        switch (choice) {
-            case 1:
-                do {
-                    System.out.println("======= ADMIN =======");
-                    System.out.print("Masukkan Username: ");
-                    InputUserAdmin = input.next();
-                    System.out.print("Masukkan Password: ");
-                    InputPassAdmin = input.next();
-                    System.out.println("=====================");
+        if (choice == 1) {
+            do {
+                System.out.println("======= ADMIN =======");
+                System.out.print("Masukkan Username: ");
+                InputUserAdmin = input.next();
+                System.out.print("Masukkan Password: ");
+                InputPassAdmin = input.next();
+                System.out.println("=====================");
 
-                    if (InputUserAdmin.equals(AdminUser) && InputPassAdmin.equals(Adminpass)) {
-                        System.out.println("Login Admin Berhasil!");
-                        break;
-                    } else {
-                        System.out.println("Login gagal! Username atau password salah.");
-                    }
+                if (InputUserAdmin.equals(AdminUser) && InputPassAdmin.equals(Adminpass)) {
+                    System.out.println("Login Admin Berhasil!");
+                    break;
+                } else {
+                    System.out.println("Login gagal! Username atau password salah.");
+                }
 
-                    System.out.println("Apakah anda ingin mencoba lagi? (y/n)");
-                    Choose = input.next().charAt(0);
-                } while (Choose == 'y' || Choose == 'Y');
+                System.out.println("Apakah anda ingin mencoba lagi? (y/n)");
+                Choose = input.next().charAt(0);
+            } while (Choose == 'y' || Choose == 'Y');
+        } else if (choice == 2) {
+            do {
+                System.out.println("===== MAHASISWA ====");
+                System.out.print("Masukkan Nama: ");
+                InputName = input.next() + input.nextLine();
+                System.out.print("Masukkan NIM: ");
+                InputNIM = input.next();
+                System.out.println("=====================");
 
-                break;
-            case 2:
-                do {
-                    System.out.println("===== MAHASISWA ====");
-                    System.out.print("Masukkan Nama: ");
-                    InputName = input.next();
-                    System.out.print("Masukkan NIM: ");
-                    InputNIM = input.next();
-                    System.out.println("=====================");
+                if (InputName.equals(name) && InputNIM.equals(NIM)) {
+                    System.out.println("Login Mahasiswa berhasil!");
+                    System.out.println("===== WELLCOME =====");
+                    System.out.println("Nama : " + name);
+                    System.out.println("NIM : " + NIM);
+                    System.out.println("====================");
+                    break;
+                } else {
+                    System.out.println("Login gagal! Nama atau NIM salah.");
+                }
 
-                    if (InputName.equals(name) && InputNIM.equals(NIM)) {
-                        System.out.println("Login Mahasiswa berhasil!");
-                        System.out.println("===== WELLCOME =====");
-                        System.err.println("Nama : " + name);
-                        System.err.println("NIM : " + NIM);
-                        System.out.println("====================");
-                        break;
-                    } else {
-                        System.out.println("Login gagal! Nama atau NIM salah.");
-                    }
-
-                    System.out.println("Apakah anda ingin mencoba lagi? (y/n)");
-                    Choose = input.next().charAt(0);
-                } while (Choose == 'y' || Choose == 'Y');
-                ;
-
-                break;
-
-            default:
-                System.out.println("Pilihan Tidak Valid!");
+                System.out.println("Apakah anda ingin mencoba lagi? (y/n)");
+                Choose = input.next().charAt(0);
+            } while (Choose == 'y' || Choose == 'Y');
+            ;
+        } else {
+            System.out.println("Pilihan Tidak Valid!");
         }
+
     }
 }
