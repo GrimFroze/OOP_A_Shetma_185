@@ -1,3 +1,4 @@
+package com.module_2;
 
 public class Student {
     String Username, NIM;
